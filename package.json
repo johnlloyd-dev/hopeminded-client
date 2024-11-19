@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "HopemindedClient",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,9 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "dotenv": "^16.4.5",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "vite-plugin-vuetify": "latest",
+    "vuetify": "^3.7.4"
   }
 }
