@@ -20,11 +20,11 @@ export default defineNuxtConfig({
     },
     modules: [
         async (_options, nuxt) => {
-            nuxt.hooks.hook('vite:extendConfig', (config) => {
-                // @ts-expect-error
-                config.plugins.push(vuetify())
-            });
-        }
+                nuxt.hooks.hook('vite:extendConfig', (config) => {
+                    config.plugins = config.plugins || [];
+                    config.plugins.push(vuetify()); // Explicitly add ESM Vuetify plugin
+                });
+          },
     ],
     build: {
         transpile: ['vuetify'],
@@ -38,5 +38,12 @@ export default defineNuxtConfig({
                 transformAssetUrls,
             },
         },
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    silenceDeprecations: ['legacy-js-api']
+                }
+            }
+        }
     }
 })

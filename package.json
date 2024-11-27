@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@vitejs/plugin-vue": "^5.2.1",
     "dotenv": "^16.4.5",
     "nuxt": "^3.13.2",
+    "vite": "^6.0.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
     "vite-plugin-vuetify": "latest",
